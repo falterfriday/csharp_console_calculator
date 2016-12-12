@@ -21,7 +21,6 @@ namespace calculator
                 s1 = Console.ReadLine();
             }
             
-            
             Console.Write("Please enter a second value: ");
             string s2 = Console.ReadLine();
             int value2;
@@ -74,7 +73,14 @@ namespace calculator
         }
         static int Divide(int val1, int val2)
         {
-            return val1 / val2;
+            if (val1 == 0 || val2 == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return val1 / val2;
+            }
         }
     }
 }
